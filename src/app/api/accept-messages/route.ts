@@ -51,8 +51,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error('Error updating message acceptance status:', error);
     return Response.json(
-      { success: false, 
-        message: 'Error updating message acceptance status' },
+      { success: false, message: 'Error updating message acceptance status' },
       { status: 500 }
     );
   }
@@ -91,7 +90,7 @@ export async function GET(request: Request) {
     return Response.json(
       {
         success: true,
-        isAcceptingMessages: foundUser.isAcceptingMessage,
+        isAcceptingMessages: foundUser.isAcceptingMessages,
       },
       { status: 200 }
     );
